@@ -11,7 +11,7 @@ using UnityEngine.TextCore.Text;
 // accessed: Aug 9 2024
 public class SnailScript : MonoBehaviour
 {
-    private CharacterController snail; 
+    public CharacterController snail; 
     private Vector3 direction; 
     public float gravity = 9.81f * 2f; 
     public float jumpForce = 8f;
@@ -27,28 +27,27 @@ public class SnailScript : MonoBehaviour
         direction = Vector3.zero;
     }
 
-    // Start is called before the first frame update
-    
-    // void Start()
-    // {
-        
-    // }
-
     // Update is called once per frame
     private void Update()
     {
         direction += Vector3.down * gravity * Time.deltaTime; 
+        checkIfGrounded();
+        snail.Move(direction * Time.deltaTime);
+    }
 
+    private void checkIfGrounded(){
         if(snail.isGrounded){
             direction = Vector3.down;
 
             if(Input.GetButton("Jump")){ //why does this work and not Input.GetKeyDown(KeyCode.Space)?
                 //Debug.Log("You jumped");                  
-                direction = Vector3.up * jumpForce;
+                SnailJump();
             }
         }
+    }
 
-        snail.Move(direction * Time.deltaTime);
+    private void SnailJump(){
+        direction = Vector3.up * jumpForce;
     }
 
 }
