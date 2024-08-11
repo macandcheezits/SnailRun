@@ -315,7 +315,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 20, y: 1, z: 0.2}
@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 2014862170}
   - component: {fileID: 2014862171}
   - component: {fileID: 2014862172}
+  - component: {fileID: 2014862173}
   m_Layer: 1
   m_Name: Snail
   m_TagString: Untagged
@@ -446,6 +447,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 19.62
   jumpForce: 13
+--- !u!114 &2014862173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014862168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de989b2259ce4c849b016d0bde850e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: dec00bfd84e4b445ab41705d3c44da4c, type: 3}
+  - {fileID: 21300000, guid: 987e1689bee144a709b02328d5c07071, type: 3}
+  speed: 12
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
