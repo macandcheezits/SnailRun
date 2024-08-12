@@ -10,6 +10,13 @@ public class AnimatedSprite : MonoBehaviour{
     public float speed = 10f;
     private SpriteRenderer spriteRenderer;
 
+    private bool isInAir = false;
+
+    public bool IsInAir{
+        get { return isInAir;}
+        set { isInAir = value;}
+    }
+
     private void OnEnable(){
         Invoke(nameof(Animate), 0f);
     }
@@ -17,9 +24,9 @@ public class AnimatedSprite : MonoBehaviour{
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Animate(){
+    public void Animate(){
         frame++;
-        if(Input.GetButton("Jump")){
+        if(isInAir){
             AnimateMovement(jumpSprites);
         }else{
             AnimateMovement(runSprites);

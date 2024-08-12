@@ -1,8 +1,0 @@
-/Users/janetsong/projects/SnailRun/Temp/bin/Debug/Assembly-CSharp.deps.json
-/Users/janetsong/projects/SnailRun/Temp/bin/Debug/Assembly-CSharp.dll
-/Users/janetsong/projects/SnailRun/Temp/bin/Debug/Assembly-CSharp.pdb
-/Users/janetsong/projects/SnailRun/Temp/obj/Debug/Assembly-CSharp/Assembly-CSharp.csproj.AssemblyReference.cache
-/Users/janetsong/projects/SnailRun/Temp/obj/Debug/Assembly-CSharp/Assembly-CSharp.GeneratedMSBuildEditorConfig.editorconfig
-/Users/janetsong/projects/SnailRun/Temp/obj/Debug/Assembly-CSharp/Assembly-CSharp.csproj.CoreCompileInputs.cache
-/Users/janetsong/projects/SnailRun/Temp/obj/Debug/Assembly-CSharp/Assembly-CSharp.dll
-/Users/janetsong/projects/SnailRun/Temp/obj/Debug/Assembly-CSharp/Assembly-CSharp.pdb
