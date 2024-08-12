@@ -7,7 +7,7 @@ public class AnimatedSprite : MonoBehaviour{
     public Sprite[] runSprites;
     public Sprite[] jumpSprites;
     private int frame;
-    public float speed = 10f;
+    //public float speed = 10f;
     private SpriteRenderer spriteRenderer;
 
     private bool isInAir = false;
@@ -21,6 +21,7 @@ public class AnimatedSprite : MonoBehaviour{
         Invoke(nameof(Animate), 0f);
     }
     private void Awake(){
+        Debug.Log("Awake was called in AnimatedSprite");
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -31,7 +32,7 @@ public class AnimatedSprite : MonoBehaviour{
         }else{
             AnimateMovement(runSprites);
         }
-        Invoke(nameof(Animate), 1f/speed); //this is the part that differs from the video
+        Invoke(nameof(Animate), 1f/GameManager.Instance.gameSpeed); //this is the part that differs from the video
     }
 
     private void AnimateMovement(Sprite[] frames){

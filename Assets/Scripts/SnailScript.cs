@@ -22,6 +22,7 @@ public class SnailScript : MonoBehaviour
 
     // Called automatically when script is initialized
     private void Awake(){
+        Debug.Log("Awake was called in SnailScript");
         snail = GetComponent<CharacterController>();
         sprite = GetComponent<AnimatedSprite>();
     }
@@ -36,7 +37,7 @@ public class SnailScript : MonoBehaviour
     {
         direction += Vector3.down * gravity * Time.deltaTime; 
         CheckIfSnailGrounded();
-        sprite.IsInAir = isInAir;
+        sprite.IsInAir = isInAir; //updates the sprite property
         snail.Move(direction * Time.deltaTime);
     }
 

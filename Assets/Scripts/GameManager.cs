@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 // reference: This class is modelled after the GameManager class from a tutorial
@@ -19,19 +20,24 @@ public class GameManager : MonoBehaviour
         } else {
             DestroyImmediate(gameObject);
         }
+        
     }
 
     private void OnDestroy(){
         if(Instance == this){
             Instance = null;
         }
-    }
+    } 
 
     private void Start(){
         NewGame();
     }
 
     private void NewGame(){
+        gameSpeed = initialGameSpeed;
+    }
+
+    private void Update(){
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
     }
 }

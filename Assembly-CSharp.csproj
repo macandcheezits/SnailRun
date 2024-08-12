@@ -67,6 +67,7 @@
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Scripts/AnimatedSprite.cs" />
     <Compile Include="Assets/Scripts/SnailScript.cs" />
+    <Compile Include="Assets/Scripts/GroundScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
