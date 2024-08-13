@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7509638136699344914}
   - component: {fileID: 2824552887808371019}
   - component: {fileID: 3728024916213347525}
+  - component: {fileID: 8900880890916850632}
   m_Layer: 0
   m_Name: GoatCheese2R
   m_TagString: Obstacle
@@ -27,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 2276631796310864732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8045025, y: -2.45, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -4.8045025, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.15, y: 0.96, z: 0.2}
   m_Center: {x: -0.06, y: -0.33, z: 0}
+--- !u!114 &8900880890916850632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276631796310864732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114d719b5e4ee4490bd301f8e2933395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

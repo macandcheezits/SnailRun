@@ -8,13 +8,13 @@ public class Obstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        leftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1f;
+        leftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 2f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.left * GameManager.Instance.gameSpeed;
+        transform.position += Vector3.left * GameManager.Instance.gameSpeed * Time.deltaTime;
 
         if(transform.position.x < leftEdge){
             Destroy(gameObject);

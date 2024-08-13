@@ -17,12 +17,12 @@ public class GroundScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {   
-        Debug.Log("Update was called in GroundScript");
-        Debug.Log($"GameManager.Instance.gameSpeed: {GameManager.Instance.gameSpeed}" );
+        // Debug.Log("Update was called in GroundScript");
+        //Debug.Log($"GameManager.Instance.gameSpeed: {GameManager.Instance.gameSpeed}" );
         float speed = GameManager.Instance.gameSpeed / transform.localScale.x;
-        Debug.Log($"Speed is {speed}");
-        Debug.Log($"prev offset = {meshRenderer.material.mainTextureOffset}");
+        //Debug.Log($"Speed is {speed}");
+        //Debug.Log($"prev offset = {meshRenderer.material.mainTextureOffset}");
         meshRenderer.material.mainTextureOffset += speed * Time.deltaTime * Vector2.right;
-        Debug.Log($"after offset = {meshRenderer.material.mainTextureOffset}");
+       // Debug.Log($"after offset = {meshRenderer.material.mainTextureOffset}");
     }
 }

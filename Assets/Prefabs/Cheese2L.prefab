@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5454291029675366675}
   - component: {fileID: 7459183274262098728}
   - component: {fileID: 2872531499878195975}
+  - component: {fileID: 5456274632399852347}
   m_Layer: 0
   m_Name: Cheese2L
   m_TagString: Obstacle
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.5279472, y: -2.46, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.36, y: 0.93, z: 0.2}
   m_Center: {x: -0.06, y: -0.27, z: 0}
+--- !u!114 &5456274632399852347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840589162514970148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114d719b5e4ee4490bd301f8e2933395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -497,7 +497,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.54, y: -2.06, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snail: {fileID: 0}
   gravity: 19.62
-  jumpForce: 13
+  jumpForce: 10
   isInAir: 0
 --- !u!114 &2014862173
 MonoBehaviour:

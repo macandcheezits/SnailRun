@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3496547773265134445}
   - component: {fileID: 1926609728580717649}
   - component: {fileID: 3244712951731554907}
+  - component: {fileID: 5336914959989479169}
   m_Layer: 0
   m_Name: SnailLeft
   m_TagString: Obstacle
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.82, y: -2.46, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.56, y: 1.03, z: 0.2}
   m_Center: {x: 0.08, y: 0.08, z: 0}
+--- !u!114 &5336914959989479169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799207995981871528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114d719b5e4ee4490bd301f8e2933395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

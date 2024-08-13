@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1627570085893241088}
   - component: {fileID: 7252950207633683007}
   - component: {fileID: 2304026240472391342}
+  - component: {fileID: 7878196690847797642}
   m_Layer: 0
   m_Name: Cheese1R
   m_TagString: Obstacle
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.1756005, y: -2.33, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.23, y: 0.99, z: 0.2}
   m_Center: {x: -0.03, y: -0.33, z: 0}
+--- !u!114 &7878196690847797642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675463000883722442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114d719b5e4ee4490bd301f8e2933395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
