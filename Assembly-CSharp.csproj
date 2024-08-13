@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/GameManager.cs" />
+    <Compile Include="Assets/Scripts/MovingObstacleScript.cs" />
     <Compile Include="Assets/Scripts/AnimatedSprite.cs" />
     <Compile Include="Assets/Scripts/SnailScript.cs" />
     <Compile Include="Assets/Scripts/GroundScript.cs" />
