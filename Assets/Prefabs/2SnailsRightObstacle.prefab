@@ -122,6 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSprites:
   - {fileID: 21300000, guid: 0b625ebf0b85646bda3b33ac14e40385, type: 3}
+  - {fileID: 21300000, guid: 0b625ebf0b85646bda3b33ac14e40385, type: 3}
+  - {fileID: 21300000, guid: f80bc8167ebe84b14818c3cc30d554f5, type: 3}
   - {fileID: 21300000, guid: f80bc8167ebe84b14818c3cc30d554f5, type: 3}
   jumpSprites: []
 --- !u!114 &6370116888576316524

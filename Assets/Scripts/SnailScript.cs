@@ -56,4 +56,10 @@ public class SnailScript : MonoBehaviour
         direction = Vector3.up * jumpForce;
     }
 
+    private void OnTriggerEnter(Collider obstacle){
+        if(obstacle.CompareTag("Obstacle")){
+            GameManager.Instance.GameOver();
+        }
+    }
+
 }

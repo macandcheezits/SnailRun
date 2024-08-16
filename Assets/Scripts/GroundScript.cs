@@ -17,7 +17,7 @@ public class GroundScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {   
-        // Debug.Log("Update was called in GroundScript");
+        //Debug.Log("Update was called in GroundScript");
         //Debug.Log($"GameManager.Instance.gameSpeed: {GameManager.Instance.gameSpeed}" );
         float speed = GameManager.Instance.gameSpeed / transform.localScale.x;
         //Debug.Log($"Speed is {speed}");

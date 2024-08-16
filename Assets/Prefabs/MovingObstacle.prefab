@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7060250912783768456}
   - component: {fileID: 7941071159740947103}
   - component: {fileID: 6147878247098097992}
-  - component: {fileID: 3209863717632912551}
   - component: {fileID: 8505057429964496311}
+  - component: {fileID: 9012401937427679221}
   m_Layer: 0
   m_Name: MovingObstacle
   m_TagString: Obstacle
@@ -107,7 +107,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.46, y: 0.94, z: 0.2}
+  m_Size: {x: 1.34, y: 0.79, z: 0.2}
   m_Center: {x: 0.07, y: -0.03, z: 0}
 --- !u!114 &6147878247098097992
 MonoBehaviour:
@@ -125,18 +125,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 861a97bcec71f41c8bb79d3231d99df1, type: 3}
   - {fileID: 21300000, guid: cac24ede768674feca14f5fba2e2792f, type: 3}
   jumpSprites: []
---- !u!114 &3209863717632912551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395231965987598977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6abee40c80a142258bf65d36433322a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8505057429964496311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,5 +135,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 114d719b5e4ee4490bd301f8e2933395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9012401937427679221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395231965987598977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e6c5dc6d0ff41de8786b705af2e252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

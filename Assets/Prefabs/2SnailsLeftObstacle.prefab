@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSprites:
   - {fileID: 21300000, guid: fc8b27247e3314737b887c8e58b60af8, type: 3}
+  - {fileID: 21300000, guid: fc8b27247e3314737b887c8e58b60af8, type: 3}
+  - {fileID: 21300000, guid: 2ded67048436d48b087aa89fa27188ba, type: 3}
   - {fileID: 21300000, guid: 2ded67048436d48b087aa89fa27188ba, type: 3}
   jumpSprites: []
 --- !u!65 &5641298082765035730
@@ -122,8 +124,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.37, y: 0.94, z: 0.2}
-  m_Center: {x: 0.09, y: 0, z: 0}
+  m_Size: {x: 2.1, y: 0.62, z: 0.2}
+  m_Center: {x: 0.09, y: -0.06, z: 0}
 --- !u!114 &9169134103163471292
 MonoBehaviour:
   m_ObjectHideFlags: 0
