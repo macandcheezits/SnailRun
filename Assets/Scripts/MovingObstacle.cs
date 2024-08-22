@@ -12,14 +12,10 @@ public class MovingObstacle : MonoBehaviour
     void Awake(){
         movingObstacle = GetComponent<SpriteRenderer>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    // EFFECTS: Moves the position of the snail
+    // MODIFIES: this
+    // EFFECTS: Moves the position of the snail obstacle
     void Update()
     {   
         if(movingObstacle.isVisible && !GameManager.Instance.isGameOver){

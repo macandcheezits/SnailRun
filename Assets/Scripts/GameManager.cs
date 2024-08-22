@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // reference: This class is modelled after the GameManager class from a tutorial
 // youtube url: https://www.youtube.com/watch?v=UPvW8kYqxZk&t=5215s
@@ -9,30 +11,42 @@ using UnityEngine;
 // author: zigurous
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set;}
-    private SnailScript snail;  
+    public static GameManager Instance { get; private set; }
+    private SnailScript snail;
     private Spawner spawner;
 
-    public bool isGameOver = false;
-    public float gameSpeed { get; private set;}
+    public GameObject gameOverCanvas;
+
+    public bool isGameOver;
+    public float gameSpeed { get; private set; }
     public float initialGameSpeed = 5f;
     public float gameSpeedIncrease = 0.1f;
-    private void Awake(){
-        if (Instance == null){
+    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
             Instance = this;
-        } else {
+        }
+        else
+        {
             DestroyImmediate(gameObject);
         }
-        
+
     }
 
-    private void OnDestroy(){
-        if(Instance == this){
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
             Instance = null;
         }
-    } 
+    }
 
-    private void Start(){
+    // MODIFIES: this
+    // EFFECTS: Activates snail and spawner. Calls NewGame()
+    private void Start()
+    {
         snail = FindObjectOfType<SnailScript>();
         spawner = FindObjectOfType<Spawner>();
 
@@ -41,26 +55,45 @@ public class GameManager : MonoBehaviour
         NewGame();
     }
 
-    private void NewGame(){
-        Obstacle[] obstacles = FindObjectsOfType<Obstacle>(); 
+    // MODIFIES: this
+    // EFFECTS: Updates the gameSpeed to be initialGameSpeed, destroys all obstacles if there are any
+    public void NewGame()
+    {   
+        Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
 
-        foreach (var obstacle in  obstacles){
+        foreach (var obstacle in obstacles)
+        {
             Destroy(obstacle.gameObject);
         }
-        
+
         gameSpeed = initialGameSpeed;
+        isGameOver = false;
+        enabled = true;
+        snail.SetIsAlive(true);
+        snail.ResetSnailObject();
+
+        gameOverCanvas.SetActive(false);
+        spawner.gameObject.SetActive(true);
+        snail.enabled = true;
+        //snail.gameObject.SetActive(true);
+        
+        // snail.GetSnailSprite().enabled = true;
+        // Debug.Log($"The sprite is active: {snail.GetSnailSprite().gameObject.activeSelf}");
     }
 
-    private void Update(){
+    private void Update()
+    {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
     }
 
-    public void GameOver(){
+    public void GameOver()
+    {
         gameSpeed = 0;
         enabled = false;
         isGameOver = true;
-        snail.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);
-
+        gameOverCanvas.SetActive(true);
+        snail.enabled = false;
+        //Debug.Log($"gameOver canvas is active: {gameOverCanvas.activeSelf}");
     }
 }
