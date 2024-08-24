@@ -70,6 +70,7 @@ public class AnimatedSprite : MonoBehaviour
         Debug.Log("OnEnable() in AnimatedSprite class has been disabled");
     }
 
+    // Getters and Setters:
     public bool GetIsInAir(){
         return this.isInAir;
     }

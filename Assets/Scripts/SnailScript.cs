@@ -85,7 +85,8 @@ public class SnailScript : MonoBehaviour
 
     // REQUIRES: The snail must collide with an obstacle
     // MODIFIES: GameManager.Instance, this 
-    // EFFECTS: When the snail collides with an obstacle, GameOver() is called, an animation plays, the snail sprite is updated, isAlive is set to false.
+    // EFFECTS: When the snail collides with an obstacle, GameOver() is called, an animation plays, 
+    //          the snail sprite is updated, isAlive is set to false, this and the sprite aniamations are disabled.
     private void OnTriggerEnter(Collider obstacle)
     {
         if (obstacle.CompareTag("Obstacle"))
@@ -94,30 +95,29 @@ public class SnailScript : MonoBehaviour
             GameManager.Instance.GameOver();
             snailSprite.SetSpriteImg(injured);
             snailSprite.enabled = false;
+            this.enabled = false;
         }
     }
 
-    // public AnimatedSprite GetSnailSprite()
-    // {
-    //     return this.snailSprite;
-    // }
-
     // REQUIRES: Must be called in NewGame() in GameManager 
     // MODIFIES: this 
-    // EFFECTS: Resets the sprite to its default image, sets its object to enabled
+    // EFFECTS: Resets the sprite to its default image and enables its animation, resets isAlive to true, sets its own object to enabled
     public void ResetSnailObject(){
         snailSprite.SetSpriteImg(defaultSprite);
         snailSprite.enabled = true;
+        this.isAlive = true;
+        this.enabled = true;
     }
 
+    // Getters and Setters:    
     public bool GetIsAlive()
     {
         return this.isAlive;
     }
 
-    public void SetIsAlive(bool b){
-        this.isAlive = b;
-    }
+    // public void SetIsAlive(bool b){
+    //     this.isAlive = b;
+    // }
 
     public bool IsInAir()
     {

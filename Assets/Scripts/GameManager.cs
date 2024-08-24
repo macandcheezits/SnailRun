@@ -68,16 +68,12 @@ public class GameManager : MonoBehaviour
 
         gameSpeed = initialGameSpeed;
         isGameOver = false;
-        enabled = true;
-        snail.SetIsAlive(true);
-        snail.ResetSnailObject();
+        this.enabled = true;
 
+        snail.ResetSnailObject();
         gameOverCanvas.SetActive(false);
         spawner.gameObject.SetActive(true);
-        snail.enabled = true;
-        //snail.gameObject.SetActive(true);
         
-        // snail.GetSnailSprite().enabled = true;
         // Debug.Log($"The sprite is active: {snail.GetSnailSprite().gameObject.activeSelf}");
     }
 
@@ -89,11 +85,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameSpeed = 0;
-        enabled = false;
+        this.enabled = false;
         isGameOver = true;
         spawner.gameObject.SetActive(false);
         gameOverCanvas.SetActive(true);
-        snail.enabled = false;
         //Debug.Log($"gameOver canvas is active: {gameOverCanvas.activeSelf}");
     }
 }
