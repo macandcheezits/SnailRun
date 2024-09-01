@@ -14,14 +14,16 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     private SnailScript snail;
     private Spawner spawner;
-
     public GameObject gameOverCanvas;
 
-    public bool isGameOver;
+    public Text scoreText;
+    public Text highScoreText;
+    private float score;
+    public bool isGameOver = false;
     public float gameSpeed { get; private set; }
     public float initialGameSpeed = 5f;
     public float gameSpeedIncrease = 0.1f;
-    
+
     private void Awake()
     {
         if (Instance == null)
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         snail = FindObjectOfType<SnailScript>();
         spawner = FindObjectOfType<Spawner>();
-
+        
         snail.gameObject.SetActive(true);
         spawner.gameObject.SetActive(true);
         NewGame();
@@ -58,7 +60,7 @@ public class GameManager : MonoBehaviour
     // MODIFIES: this
     // EFFECTS: Updates the gameSpeed to be initialGameSpeed, destroys all obstacles if there are any
     public void NewGame()
-    {   
+    {
         Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
 
         foreach (var obstacle in obstacles)
@@ -69,17 +71,20 @@ public class GameManager : MonoBehaviour
         gameSpeed = initialGameSpeed;
         isGameOver = false;
         this.enabled = true;
-
+        score = 0;
         snail.ResetSnailObject();
         gameOverCanvas.SetActive(false);
         spawner.gameObject.SetActive(true);
-        
+        UpdateHighScore();
+
         // Debug.Log($"The sprite is active: {snail.GetSnailSprite().gameObject.activeSelf}");
     }
 
     private void Update()
     {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
+        score += gameSpeed * Time.deltaTime;
+        UpdateScore();
     }
 
     public void GameOver()
@@ -89,6 +94,22 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         spawner.gameObject.SetActive(false);
         gameOverCanvas.SetActive(true);
+        UpdateHighScore();
         //Debug.Log($"gameOver canvas is active: {gameOverCanvas.activeSelf}");
+    }
+
+    private void UpdateScore()
+    {
+        scoreText.text = Mathf.FloorToInt(score).ToString("D5");
+    }
+
+    private void UpdateHighScore(){
+        float highScore = PlayerPrefs.GetFloat("hiscore", 0);
+
+        if(score > highScore){
+            highScore = score;
+            PlayerPrefs.SetFloat("hiscore", highScore);
+        }
+        highScoreText.text = Mathf.FloorToInt(highScore).ToString("D5");
     }
 }
