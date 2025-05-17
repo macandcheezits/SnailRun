@@ -1,1 +1,9 @@
 Library/
+.log
+.lock
+.tmp
+.DS_Store 
+.Thumbs.db
+.o
+.pyc
+.class
