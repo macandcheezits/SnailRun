@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 // reference: This class is modelled after the GameManager class from a tutorial
 // youtube url: https://www.youtube.com/watch?v=UPvW8kYqxZk&t=5215s
@@ -51,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
         snail = FindObjectOfType<SnailScript>();
         spawner = FindObjectOfType<Spawner>();
-        
+
         snail.gameObject.SetActive(true);
         spawner.gameObject.SetActive(true);
         NewGame();
@@ -103,13 +101,20 @@ public class GameManager : MonoBehaviour
         scoreText.text = Mathf.FloorToInt(score).ToString("D5");
     }
 
-    private void UpdateHighScore(){
+    private void UpdateHighScore()
+    {
         float highScore = PlayerPrefs.GetFloat("hiscore", 0);
 
-        if(score > highScore){
+        if (score > highScore)
+        {
             highScore = score;
             PlayerPrefs.SetFloat("hiscore", highScore);
         }
         highScoreText.text = Mathf.FloorToInt(highScore).ToString("D5");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
